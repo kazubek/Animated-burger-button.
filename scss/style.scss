@@ -1,0 +1,65 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.btn {
+	position: fixed;
+	top: 30px;
+	right: 30px;
+	width: 40px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border:none;
+	background: none;
+	outline: none;
+	cursor: pointer;
+
+	&__burger {
+		position: relative;
+		width: 40px;
+		height: 32px;
+	
+
+		&-bar {
+			position: absolute;
+			width: 100%;
+			height: 6px;
+			background: linear-gradient(90deg, #000000, #10110c, #1a1c15, #24261b, #2e3122, #383c28, #42482f, #4d5436);
+			border-radius: 2px;
+			left: 0;
+			transition:  all .3s;
+			
+			
+
+
+			&:nth-child(1) {
+				top: 0;
+			}
+			&:nth-child(2) {
+				top: calc(50% - 3px);
+			}
+			&:nth-child(3) {
+				bottom: 0;
+			}
+		}
+		
+	}
+}
+.cross .btn__burger .btn__burger-bar{
+	background: linear-gradient(90deg, #4d5436, #42482f, #383c28, #2e3122, #24261b, #1a1c15, #10110c, #000000);
+}
+.cross .btn__burger .btn__burger-bar:nth-child(1){
+	transform: rotate(-45deg);
+	top: calc(50% - 3px);
+}
+.cross .btn__burger .btn__burger-bar:nth-child(2){
+	left: 100%;
+	opacity: 0;
+}
+.cross .btn__burger .btn__burger-bar:nth-child(3){
+	transform: rotate(45deg);
+	bottom: calc(50% - 3px);
+}
